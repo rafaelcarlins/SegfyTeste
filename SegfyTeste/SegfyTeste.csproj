@@ -93,6 +93,7 @@
     </Compile>
     <Compile Include="Interface\IAutomovel.cs" />
     <Compile Include="Models\Automovel.cs" />
+    <Compile Include="Models\Cliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\AutomovelService.cs" />
   </ItemGroup>
