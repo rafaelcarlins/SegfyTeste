@@ -12,17 +12,27 @@ namespace SegfyTeste.Controllers
     public class ApoliceController : ApiController
     {
         private static List<Automovel> automoveis = new List<Automovel>();
+        AutomovelService automovelService = new AutomovelService();
 
         public List<Automovel> Get()
         {
+            automovelService.ListarApolice();
             return automoveis;
         }
 
-        public void Post()
+        public void Post(int IdCliente, int IdVeiculo, double ValorPremio)
         {
-            AutomovelService automovelService = new AutomovelService();
+            automovelService.InserirApolice( IdCliente, IdVeiculo, ValorPremio);
+        }
 
-            automovelService.InserirAutomovel();
+        public bool Delete(int Apolice)
+        {
+            return automovelService.ExcluirApolice(Apolice);
+        }
+
+        public bool Update(int Apolice, double ValorPremio)
+        {
+            return automovelService.AtualizarVeiculo(ValorPremio, Apolice);
         }
     }
 }

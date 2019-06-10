@@ -12,9 +12,6 @@ namespace SegfyTeste.Models
         public string Placa { get; set; }
         public double ValorPremio { get; set; }
 
-        public Automovel(int apolice)
-        {
-            this.Apolice = apolice;
-        }
+        public string NomeCliente { get; set; }
     }
 }

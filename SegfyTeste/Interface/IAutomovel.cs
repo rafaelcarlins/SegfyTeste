@@ -9,7 +9,9 @@ namespace SegfyTeste.Interface
 {
     public interface IAutomovel
     {
-        bool InserirAutomovel();
-        List<Automovel> ListarAutomoveis();
+        bool InserirApolice(int IdCliente, int IdVeiculo, double ValorPremio);
+        List<Automovel> ListarApolice();
+        bool ExcluirApolice(int Apolice);
+        bool AtualizarVeiculo(double ValorPremio, int Apolice);
     }
 }
