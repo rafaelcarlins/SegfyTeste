@@ -1,0 +1,65 @@
+Bando de dados são 3 tabelas, todas criadas como LocalDB, segue abaixo o script se necessário;
+
+-------------------------------------------------------------------------------------------------
+USE [Automoveis]
+GO
+
+/****** Object: Table [dbo].[Apolice] Script Date: 11/06/2019 15:34:48 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Apolice] (
+    [Id]          INT        IDENTITY (1, 1) NOT NULL,
+    [IDVeiculo]   NCHAR (10) NULL,
+    [ValorPremio] MONEY      NULL
+);
+-------------------------------------------------------------------------------------------------
+
+USE [Automoveis]
+GO
+
+/****** Object: Table [dbo].[Cliente] Script Date: 11/06/2019 15:35:21 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Cliente] (
+    [Id]      INT        IDENTITY (1, 1) NOT NULL,
+    [CPFCNPJ] NCHAR (11) NULL,
+    [Nome]    NCHAR (50) NULL
+);
+
+
+
+-------------------------------------------------------------------------------------------------
+USE [Automoveis]
+GO
+
+/****** Object: Table [dbo].[Veiculo] Script Date: 11/06/2019 15:35:39 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Veiculo] (
+    [Id]        INT        IDENTITY (1, 1) NOT NULL,
+    [Placa]     NCHAR (10) NULL,
+    [IdCliente] INT        NULL
+);
+-------------------------------------------------------------------------------------------------
+
+
+Nas instruções não haviam informações sobre criar cadastro de clientes e nem veículos, os dados estão em hardcode no projeto.
+Para testar utilizei POSTMAN, ficando a critério o que utilizar para testar a API.
+Conforme havia conversado com recrutador, não seria necessário criar front e que teria uma avaliação sobre o que foi feito em back.
+
+
+
+
+
